@@ -148,8 +148,3 @@ Where the vector `x` is the solution to the system \( Ax = b \).
 - **Fortran Programming Guide**: https://fortran-lang.org/ (For further learning on Fortran and its syntax)
 ```
 
-
-
-
-
-

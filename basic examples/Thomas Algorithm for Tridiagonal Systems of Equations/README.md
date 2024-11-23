@@ -105,10 +105,3 @@ The Thomas algorithm is an efficient method for solving tridiagonal systems. Thi
 **Notes**:
 - For larger systems, simply modify the value of `n` and the corresponding coefficient arrays.
 - The program checks for division by zero during the forward elimination phase and will output an error message if the matrix is singular.
-```
-
-
-
-
-
-

@@ -145,7 +145,7 @@ This algorithm is highly efficient for specific types of systems, making it a ke
 
 To run the above examples in **Plato IDE**, follow these steps:
 
-1. **Install Plato IDE**: Download and install the Plato IDE for Fortran from [Plato's official website](http://www.platofortran.com).
+1. **Install Plato IDE**: Download and install the Plato IDE for Fortran from [here](https://www.silverfrost.com/16/ftn95/plato.aspx).
    
 2. **Create a New Project**:
    - Open Plato IDE.

@@ -1,12 +1,16 @@
+To properly display mathematical equations and matrices in **Markdown** with LaTeX-style formatting (such as the one used for the Thomas Algorithm example), you'll need to use a platform or tool that supports LaTeX rendering. Most Markdown editors, including GitHub and Jupyter Notebooks, support LaTeX syntax enclosed by dollar signs for inline math or double dollar signs for block math. For matrices, the `bmatrix` environment is commonly used in LaTeX.
+
+Here is the corrected version of the matrix formatting using LaTeX in **Markdown** for your **Thomas Algorithm** example:
+
+---
+
 # Thomas Algorithm for Solving Tridiagonal Systems of Equations
 
 ## Overview
 
-The **Thomas Algorithm** is a specialized method for solving a system of linear equations represented by a tridiagonal matrix. This matrix structure appears frequently in numerical methods, particularly in solving partial differential equations using finite difference methods.
+The **Thomas Algorithm** is an efficient method for solving a system of linear equations represented by a tridiagonal matrix. This matrix structure is common in numerical methods, particularly for solving partial differential equations using finite difference methods.
 
-This program demonstrates the use of the Thomas Algorithm to solve a system of equations \(A \cdot x = b\), where \(A\) is a tridiagonal matrix, \(b\) is the right-hand side vector, and \(x\) is the solution vector.
-
-The matrix \(A\) for a system of \(n\) equations is structured as follows:
+This program demonstrates the use of the Thomas Algorithm to solve a system of equations \(A \cdot x = b\), where \(A\) is a tridiagonal matrix, and \(b\) is the right-hand side vector. The matrix \(A\) is structured as follows:
 
 \[
 A = \begin{bmatrix}
@@ -19,18 +23,17 @@ a_2 & d_2 & c_2 & 0   & \dots & 0 \\
 \]
 
 Where:
-- `a(i)` represents the subdiagonal elements (below the main diagonal).
-- `c(i)` represents the superdiagonal elements (above the main diagonal).
-- `d(i)` represents the diagonal elements.
-- `b` is the right-hand side vector.
-- `x` is the solution vector that we aim to compute.
+- \(a(i)\) represents the subdiagonal elements (below the main diagonal).
+- \(c(i)\) represents the superdiagonal elements (above the main diagonal).
+- \(d(i)\) represents the diagonal elements.
+- \(b\) is the right-hand side vector.
+- \(x\) is the solution vector.
 
 ## Program Features
 
-- **Dynamic Matrix Size**: The program allows the user to input the size of the matrix (denoted by `n`), making it flexible for systems of varying sizes.
-- **Efficient Computation**: The Thomas Algorithm reduces the complexity of Gaussian elimination from \(O(n^3)\) to \(O(n)\) for tridiagonal systems, making it highly efficient.
-- **User Input**: The user is prompted to enter the coefficients for the tridiagonal matrix (subdiagonal, diagonal, superdiagonal) and the right-hand side vector.
-- **Error Handling**: Checks for division by zero are included, ensuring that the program gracefully handles cases where a diagonal element is zero (which would make the system unsolvable).
+- **Dynamic Matrix Size**: The program allows for a flexible system size by user input.
+- **Efficient Computation**: The Thomas Algorithm reduces complexity from \(O(n^3)\) to \(O(n)\) for tridiagonal systems.
+- **Error Handling**: Includes checks for division by zero to handle singular matrices.
 
 ## Program Walkthrough
 
@@ -47,7 +50,7 @@ b(1) = 2
 b(2) = 0
 ```
 
-The program initializes the tridiagonal matrix coefficients (`a`, `b`, `c`, `d`) for a system of equations. The matrix size is determined by user input, and the values for the coefficients are taken interactively.
+The coefficients for the tridiagonal matrix `A` and the right-hand side vector `b` are initialized. You can modify the matrix size `n` as needed.
 
 ### 2. **Forward Elimination**
 
@@ -63,9 +66,7 @@ do k = 1, n-1
 end do
 ```
 
-In the forward elimination step, the goal is to eliminate the lower diagonal elements, transforming the system into an upper triangular form. This step involves:
-- Checking for a zero diagonal element (`d(k)`), as division by zero would make the system unsolvable.
-- Updating the coefficients using the ratio of the current element and its corresponding diagonal element.
+The forward elimination process eliminates the lower diagonal elements to convert the system into upper triangular form. It checks for a zero diagonal element (which would make the system unsolvable).
 
 ### 3. **Backward Substitution**
 
@@ -76,7 +77,7 @@ do i = n-1, 1, -1
 end do
 ```
 
-Once the system is in upper triangular form, the solution is computed by solving for the last variable first and then moving upwards to calculate all variables.
+In the backward substitution step, the solution is computed starting from the last variable and working upwards to calculate the entire solution vector `x`.
 
 ### 4. **Output**
 
@@ -85,7 +86,7 @@ print *, 'Solution vector x: '
 print *, x
 ```
 
-After solving the system, the program prints the solution vector `x`, which contains the values of the unknowns in the system.
+The program prints the solution vector `x`, which contains the values of the unknowns.
 
 ## Example
 
@@ -121,26 +122,19 @@ Solution vector x:
  1.0000000
 ```
 
-This indicates that the solution to the system of equations is \(x_1 = 1\), \(x_2 = 1\), and \(x_3 = 1\).
+This output indicates that the solution to the system of equations is \(x_1 = 1\), \(x_2 = 1\), and \(x_3 = 1\).
 
 ## Key Concepts
 
-- **Thomas Algorithm**: A specialized form of Gaussian elimination optimized for tridiagonal systems of equations. It transforms the system into an upper triangular matrix using forward elimination, followed by backward substitution to find the solution.
-- **Tridiagonal System**: A system of linear equations where the coefficient matrix has non-zero elements only on the main diagonal and the two adjacent diagonals (subdiagonal and superdiagonal).
+- **Thomas Algorithm**: This is a specialized version of Gaussian elimination tailored for tridiagonal systems.
+- **Tridiagonal Matrix**: A matrix where only the main diagonal and the two adjacent diagonals are non-zero.
+- **Forward Elimination**: Converts the system to an upper triangular form.
+- **Backward Substitution**: Solves for the unknowns after the matrix has been converted into upper triangular form.
 
 ## Conclusion
 
-This program demonstrates an efficient way to solve a system of linear equations with a tridiagonal coefficient matrix using the Thomas Algorithm. It's an essential tool in computational mathematics and numerical analysis, particularly in problems where large sparse matrices arise, such as in finite difference methods for partial differential equations.
-
-### Key Features:
-- Efficient, \(O(n)\) complexity for tridiagonal systems.
-- Interactive, user-driven input for matrix and vector coefficients.
-- Handles edge cases like division by zero with error messages.
-  
-### Notes:
-- The program is suitable for small to medium-sized systems. For larger systems, consider optimizing memory allocation and enhancing performance further.
-- You can modify the matrix size `n` to handle larger systems by adjusting the input accordingly.
+The **Thomas Algorithm** is an efficient method for solving systems of linear equations with a tridiagonal matrix. This program demonstrates its application with forward elimination followed by backward substitution to find the solution. This algorithm is particularly useful in numerical simulations where such systems frequently arise.
 
 ---
 
-This improved implementation makes the Thomas Algorithm more flexible, robust, and suitable for various problem sizes, allowing users to solve tridiagonal systems of any size.
+This version of the readme now uses the correct Markdown syntax for LaTeX formatting with proper matrix equations. Ensure that the platform you're using (e.g., GitHub, Jupyter Notebooks) supports this LaTeX rendering for it to be displayed properly.

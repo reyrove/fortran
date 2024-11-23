@@ -146,4 +146,3 @@ Where the vector `x` is the solution to the system \( Ax = b \).
 
 - **Gaussian Elimination**: https://en.wikipedia.org/wiki/Gaussian_elimination
 - **Fortran Programming Guide**: https://fortran-lang.org/ (For further learning on Fortran and its syntax)
-```

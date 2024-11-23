@@ -4,12 +4,12 @@ This repository contains a collection of basic **Fortran 95** (FTN95) programmin
 
 ## Table of Contents
 
-1. [CPU Time Measurement]
-2. [Gaussian Elimination and Factorization]
-3. [Gaussian Elimination with Scaled Partial Pivoting]
-4. [Geometric Series Sum of Powers of 2]
-5. [Interactive Factorial Calculator Program]
-6. [Thomas Algorithm for Tridiagonal Systems of Equations]
+1. CPU Time Measurement
+2. Gaussian Elimination and Factorization
+3. Gaussian Elimination with Scaled Partial Pivoting
+4. Geometric Series Sum of Powers of 2
+5. Interactive Factorial Calculator Program
+6. Thomas Algorithm for Tridiagonal Systems of Equations
 
 ## 1. CPU Time Measurement
 
@@ -164,13 +164,3 @@ To run the above examples in **Plato IDE**, follow these steps:
 ## License and Usage
 
 These code examples are **free to use**. Please credit the source if you decide to use them in your own projects, particularly when modifying or redistributing the content.
-
----
-
-
-
-
-
-
-
-

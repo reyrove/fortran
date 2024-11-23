@@ -1,33 +1,29 @@
-To properly display mathematical equations and matrices in **Markdown** with LaTeX-style formatting (such as the one used for the Thomas Algorithm example), you'll need to use a platform or tool that supports LaTeX rendering. Most Markdown editors, including GitHub and Jupyter Notebooks, support LaTeX syntax enclosed by dollar signs for inline math or double dollar signs for block math. For matrices, the `bmatrix` environment is commonly used in LaTeX.
-
-Here is the corrected version of the matrix formatting using LaTeX in **Markdown** for your **Thomas Algorithm** example:
-
----
-
 # Thomas Algorithm for Solving Tridiagonal Systems of Equations
 
 ## Overview
 
 The **Thomas Algorithm** is an efficient method for solving a system of linear equations represented by a tridiagonal matrix. This matrix structure is common in numerical methods, particularly for solving partial differential equations using finite difference methods.
 
-This program demonstrates the use of the Thomas Algorithm to solve a system of equations \(A \cdot x = b\), where \(A\) is a tridiagonal matrix, and \(b\) is the right-hand side vector. The matrix \(A\) is structured as follows:
+This program demonstrates the use of the Thomas Algorithm to solve a system of equations \(A \cdot x = b\), where \(A\) is a tridiagonal matrix, and \(b\) is the right-hand side vector.
 
-\[
-A = \begin{bmatrix}
-d_1 & c_1 & 0   & 0   & \dots & 0 \\
-a_2 & d_2 & c_2 & 0   & \dots & 0 \\
-0   & a_3 & d_3 & c_3 & \dots & 0 \\
-\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
-0   & 0   & 0   & 0   & \dots & d_n
-\end{bmatrix}
-\]
+### Tridiagonal Matrix Representation
+
+For a tridiagonal matrix \(A\), the matrix looks like this:
+
+```
+A = | d1  c1  0   0   ...  0  |
+    | a2  d2  c2  0   ...  0  |
+    | 0   a3  d3  c3  ...  0  |
+    | .   .   .   .   .     .  |
+    | 0   0   0   0   ...  dn |
+```
 
 Where:
-- \(a(i)\) represents the subdiagonal elements (below the main diagonal).
-- \(c(i)\) represents the superdiagonal elements (above the main diagonal).
-- \(d(i)\) represents the diagonal elements.
-- \(b\) is the right-hand side vector.
-- \(x\) is the solution vector.
+- `a(i)` are the subdiagonal elements (below the main diagonal),
+- `c(i)` are the superdiagonal elements (above the main diagonal),
+- `d(i)` are the diagonal elements,
+- `b` is the right-hand side vector, and
+- `x` is the solution vector.
 
 ## Program Features
 
@@ -35,7 +31,7 @@ Where:
 - **Efficient Computation**: The Thomas Algorithm reduces complexity from \(O(n^3)\) to \(O(n)\) for tridiagonal systems.
 - **Error Handling**: Includes checks for division by zero to handle singular matrices.
 
-## Program Walkthrough
+## Code Walkthrough
 
 ### 1. **Initialization**
 
@@ -91,6 +87,7 @@ The program prints the solution vector `x`, which contains the values of the unk
 ## Example
 
 ### Input:
+
 ```
 Enter the size of the matrix (n):
 3
@@ -115,6 +112,7 @@ Enter the right-hand side vector b:
 ```
 
 ### Output:
+
 ```
 Solution vector x:
  1.0000000
@@ -134,7 +132,3 @@ This output indicates that the solution to the system of equations is \(x_1 = 1\
 ## Conclusion
 
 The **Thomas Algorithm** is an efficient method for solving systems of linear equations with a tridiagonal matrix. This program demonstrates its application with forward elimination followed by backward substitution to find the solution. This algorithm is particularly useful in numerical simulations where such systems frequently arise.
-
----
-
-This version of the readme now uses the correct Markdown syntax for LaTeX formatting with proper matrix equations. Ensure that the platform you're using (e.g., GitHub, Jupyter Notebooks) supports this LaTeX rendering for it to be displayed properly.

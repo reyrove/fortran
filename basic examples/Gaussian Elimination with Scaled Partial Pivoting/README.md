@@ -120,9 +120,6 @@ This program demonstrates the use of Gaussian elimination with scaled partial pi
 ## References
 - [Gaussian Elimination](https://en.wikipedia.org/wiki/Gaussian_elimination)
 - [Scaled Partial Pivoting](https://en.wikipedia.org/wiki/Partial_pivoting)
-```
-
-
 
 
 

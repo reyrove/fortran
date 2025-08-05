@@ -163,14 +163,6 @@ To run the above examples in **Plato IDE**, follow these steps:
 
 ## License and Usage
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 These code examples are **free to use**. Please credit the source if you decide to use them in your own projects, particularly when modifying or redistributing the content.
-
----
-
-
-
-
-
-
-
-
